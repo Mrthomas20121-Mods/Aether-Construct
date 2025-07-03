@@ -43,7 +43,7 @@ public class AetherConstructMaterialStatsProvider extends AbstractMaterialStatsD
                 HandleMaterialStats.multipliers().durability(1.15f).attackSpeed(1.1f).attackDamage(0.9f).build(),
                 StatlessMaterialStats.BINDING);
 
-        addMaterialStats(AetherMaterialIds.VALKYRIE,
+        addMaterialStats(AetherMaterialIds.VALKYRUM,
                 new HeadMaterialStats(1561, 8, DIAMOND, 3f),
                 HandleMaterialStats.multipliers().durability(1.15f).attackSpeed(0.9f).attackDamage(1.1f).build(),
                 StatlessMaterialStats.BINDING);
@@ -83,7 +83,7 @@ public class AetherConstructMaterialStatsProvider extends AbstractMaterialStatsD
                         knockbackResistance(0.2f),
                 StatlessMaterialStats.MAILLE);
 
-        addArmorShieldStats(AetherMaterialIds.VALKYRIE,
+        addArmorShieldStats(AetherMaterialIds.VALKYRUM,
                 PlatingMaterialStats
                         .builder()
                         .durabilityFactor(33)

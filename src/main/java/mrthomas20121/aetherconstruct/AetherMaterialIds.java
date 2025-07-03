@@ -9,7 +9,7 @@ public class AetherMaterialIds {
     public static MaterialId ZANITE = create("zanite");
     public static MaterialId GRAVITITE = create("gravitite");
     public static MaterialId NEPTUNE = create("neptune");
-    public static MaterialId VALKYRIE = create("valkyrie");
+    public static MaterialId VALKYRUM = create("valkyrum");
     public static MaterialId PHOENIX = create("phoenix");
     public static MaterialId OBSIDIAN = create("obsidian");
 

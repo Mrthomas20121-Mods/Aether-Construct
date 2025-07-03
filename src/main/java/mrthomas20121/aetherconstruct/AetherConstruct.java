@@ -1,6 +1,6 @@
 package mrthomas20121.aetherconstruct;
 
-import mrthomas20121.aetherconstruct.datagen.ThermalConstructDatagen;
+import mrthomas20121.aetherconstruct.datagen.AetherConstructDatagen;
 import mrthomas20121.aetherconstruct.init.AetherConstructFluids;
 import mrthomas20121.aetherconstruct.init.AetherConstructItems;
 import mrthomas20121.aetherconstruct.init.AetherConstructModifiers;
@@ -34,7 +34,7 @@ public class AetherConstruct {
 		AetherConstructFluids.FLUIDS.register(bus);
 		AetherConstructModifiers.MODIFIERS.register(bus);
 
-		bus.addListener(EventPriority.NORMAL, false, GatherDataEvent.class, ThermalConstructDatagen::init);
+		bus.addListener(EventPriority.NORMAL, false, GatherDataEvent.class, AetherConstructDatagen::init);
 		bus.addListener(EventPriority.NORMAL, false, RegisterEvent.class, this::register);
 	}
 
