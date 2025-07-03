@@ -8,9 +8,9 @@ import slimeknights.tconstruct.tools.stats.*;
 
 import static net.minecraft.world.item.Tiers.*;
 
-public class ThermalConstructMaterialStatsProvider extends AbstractMaterialStatsDataProvider {
+public class AetherConstructMaterialStatsProvider extends AbstractMaterialStatsDataProvider {
 
-    public ThermalConstructMaterialStatsProvider(PackOutput packOutput, AbstractMaterialDataProvider materials) {
+    public AetherConstructMaterialStatsProvider(PackOutput packOutput, AbstractMaterialDataProvider materials) {
         super(packOutput, materials);
     }
 
