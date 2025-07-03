@@ -1,0 +1,46 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT License"
+issueTrackerURL="https://github.com/Mrthomas20121/AetherConstruct/issues"
+
+[[mods]]
+modId="aetherconstruct"
+version="1.20.1-0.0.1"
+displayName="Aether Construct"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/aetherconstruct"
+#logoFile="tinkers_reforged_logo.png"
+authors="Mrthomas20121"
+description='''
+Add Aether Compat to Tinkers
+'''
+
+[[dependencies.aetherconstruct]]
+	modId = "forge"
+	mandatory = true
+	versionRange = "[47.2.6,)"
+	ordering = "NONE"
+	side = "BOTH"
+[[dependencies.aetherconstruct]]
+	modId = "mantle"
+	mandatory = true
+	versionRange = "[1.11.55,)"
+	ordering = "AFTER"
+	side = "BOTH"
+[[dependencies.aetherconstruct]]
+	modId = "tconstruct"
+	mandatory = true
+	versionRange = "[3.10.0.67,)"
+	ordering = "AFTER"
+	side = "BOTH"
+[[dependencies.aetherconstruct]]
+	modId = "aether"
+	mandatory = true
+	versionRange = "[0,)"
+	ordering = "AFTER"
+	side = "BOTH"
+[[dependencies.aetherconstruct]]
+	modId = "aether_treasure_reforging"
+	mandatory = true
+	versionRange = "[0,)"
+	ordering = "AFTER"
+	side = "BOTH"
