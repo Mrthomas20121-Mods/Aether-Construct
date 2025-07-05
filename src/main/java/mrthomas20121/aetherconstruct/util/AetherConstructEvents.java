@@ -19,7 +19,7 @@ public class AetherConstructEvents {
 
         if(player.isInWaterOrBubble() || player.isUnderWater()) {
             for(ItemStack stack: player.getArmorSlots()) {
-                if(stack.getTag() != null) {
+                if(ToolStack.isInitialized(stack)) {
                     ToolStack tool = ToolStack.from(stack);
 
                     for(int i = 0; i<tool.getMaterials().size(); i++) {
