@@ -26,6 +26,6 @@ public class AetherConstructMaterialTraitProvider extends AbstractMaterialTraitD
 
     @Override
     public String getName() {
-        return "Thermal Material Traits";
+        return "Aether Material Traits";
     }
 }

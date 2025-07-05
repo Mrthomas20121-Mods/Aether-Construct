@@ -113,6 +113,6 @@ public class AetherConstructMaterialStatsProvider extends AbstractMaterialStatsD
 
     @Override
     public String getName() {
-        return "Thermal Material Stats";
+        return "Aether Material Stats";
     }
 }
