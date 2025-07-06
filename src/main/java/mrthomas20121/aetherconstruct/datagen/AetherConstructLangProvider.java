@@ -1,6 +1,7 @@
 package mrthomas20121.aetherconstruct.datagen;
 
 import mrthomas20121.aetherconstruct.AetherConstruct;
+import mrthomas20121.aetherconstruct.init.AetherConstructFluids;
 import mrthomas20121.aetherconstruct.init.AetherConstructModifiers;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -17,6 +18,13 @@ public class AetherConstructLangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+
+        fluid(AetherConstructFluids.calcinedHolystone, "Calcined Holystone");
+        fluid(AetherConstructFluids.moltenZanite, "Molten Zanite");
+        fluid(AetherConstructFluids.moltenGravitite, "Molten Gravitite");
+        fluid(AetherConstructFluids.moltenNeptune, "Molten Neptune");
+        fluid(AetherConstructFluids.moltenValkyrum, "Molten Valkyrum");
+        fluid(AetherConstructFluids.moltenPhoenix, "Molten Phoenix");
 
         add("itemGroup.aether_construct", "Aether Construct");
 
