@@ -19,12 +19,12 @@ public class AetherConstructLangProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
 
-        fluid(AetherConstructFluids.calcinedHolystone, "Calcined Holystone");
-        fluid(AetherConstructFluids.moltenZanite, "Molten Zanite");
-        fluid(AetherConstructFluids.moltenGravitite, "Molten Gravitite");
-        fluid(AetherConstructFluids.moltenNeptune, "Molten Neptune");
-        fluid(AetherConstructFluids.moltenValkyrum, "Molten Valkyrum");
-        fluid(AetherConstructFluids.moltenPhoenix, "Molten Phoenix");
+        fluid(AetherConstructFluids.calcinedHolystone, "Calcined Holystone", "Calcined Holystone is a useful fluid for combat.");
+        fluid(AetherConstructFluids.moltenZanite, "Molten Zanite", "Molten Zanite is a good fluid for combat.");
+        fluid(AetherConstructFluids.moltenGravitite, "Molten Gravitite", "Molten Gravitite make blocks/entity float like the tools/weapons");
+        fluid(AetherConstructFluids.moltenNeptune, "Molten Neptune", "Molten Neptune is very good for mining.");
+        fluid(AetherConstructFluids.moltenValkyrum, "Molten Valkyrum", "Molten Valkyrum is a useful fluid for combat.");
+        fluid(AetherConstructFluids.moltenPhoenix, "Molten Phoenix", "Molten Phoenix is a useful fluid for combat.");
 
         add("itemGroup.aether_construct", "Aether Construct");
 
@@ -33,8 +33,9 @@ public class AetherConstructLangProvider extends LanguageProvider {
         addModifierDesc(AetherConstructModifiers.AERIAL.getId(), "When mining, you can right-click on any stone block, and it will levitate into the air! \nWhen attacking, anything you hit will be flung into the air, causing lots of damage!");
     }
 
-    public void fluid(FluidObject<ForgeFlowingFluid> fluid, String name) {
+    public void fluid(FluidObject<ForgeFlowingFluid> fluid, String name, String fluidEffect) {
         add("fluid."+ AetherConstruct.MOD_ID+"." + fluid.getId().getPath(), name);
+        add("fluid."+ AetherConstruct.MOD_ID+"." + fluid.getId().getPath() + ".fluid_effect", fluidEffect);
         add(fluid.asItem(), name + " Bucket");
     }
 

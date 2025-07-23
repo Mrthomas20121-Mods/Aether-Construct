@@ -59,19 +59,19 @@ public class AetherConstructMaterialStatsProvider extends AbstractMaterialStatsD
 
     private void addArmor() {
 
-        addArmorShieldStats(AetherMaterialIds.NEPTUNE,
-                PlatingMaterialStats
-                        .builder()
-                        .durabilityFactor(15)
-                        .armor(3, 6, 8, 3),
-                StatlessMaterialStats.MAILLE);
-
         addArmorShieldStats(AetherMaterialIds.GRAVITITE,
                 PlatingMaterialStats
                         .builder()
+                        .durabilityFactor(15)
+                        .armor(3, 6, 8, 3)
+                        .toughness(2),
+                StatlessMaterialStats.MAILLE);
+
+        addArmorShieldStats(AetherMaterialIds.ZANITE,
+                PlatingMaterialStats
+                        .builder()
                         .durabilityFactor(33)
-                        .armor(2, 5, 6, 2)
-                        .toughness(2    ),
+                        .armor(2, 5, 6, 2),
                 StatlessMaterialStats.MAILLE);
 
         addArmorShieldStats(AetherMaterialIds.NEPTUNE,

@@ -1,9 +1,11 @@
 package mrthomas20121.aetherconstruct;
 
 import mrthomas20121.aetherconstruct.datagen.AetherConstructDatagen;
+import mrthomas20121.aetherconstruct.fluid_effect.FloatBlockFluidEffect;
 import mrthomas20121.aetherconstruct.init.AetherConstructFluids;
 import mrthomas20121.aetherconstruct.init.AetherConstructItems;
 import mrthomas20121.aetherconstruct.init.AetherConstructModifiers;
+import mrthomas20121.aetherconstruct.util.AetherTinkerPredicate;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -12,6 +14,8 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegisterEvent;
+import slimeknights.mantle.data.predicate.entity.LivingEntityPredicate;
+import slimeknights.tconstruct.library.modifiers.fluid.FluidEffect;
 
 @Mod(AetherConstruct.MOD_ID)
 public class AetherConstruct {
@@ -41,7 +45,10 @@ public class AetherConstruct {
 	private void register(RegisterEvent event) {
 		if(event.getRegistryKey() == Registries.RECIPE_SERIALIZER) {
 			// register entity predicate
+			LivingEntityPredicate.LOADER.register(getResource("is_in_aether_dim"), AetherTinkerPredicate.IS_IN_AETHER.getLoader());
 
+			// Fluid effects
+			FluidEffect.BLOCK_EFFECTS.register(getResource("float_block"), FloatBlockFluidEffect.LOADER);
 		}
 	}
 }

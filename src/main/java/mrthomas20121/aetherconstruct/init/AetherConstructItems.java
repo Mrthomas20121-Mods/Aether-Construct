@@ -17,21 +17,18 @@ public class AetherConstructItems {
 
     public static final RegistryObject<CreativeModeTab> tabAetherConstruct = CREATIVE_TABS.register(
             "aether_construct_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.aether_construct"))
-                    .icon(() -> new ItemStack(AetherConstructFluids.basalzBlood.asItem()))
+                    .icon(() -> new ItemStack(AetherConstructFluids.calcinedHolystone.asItem()))
                     .displayItems(AetherConstructItems::addTabItems)
                     .withTabsBefore(TinkerFluids.tabFluids.getId())
                     .build());
 
     private static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
 
-        output.accept(AetherConstructFluids.basalzBlood.asItem());
-        output.accept(AetherConstructFluids.blitzBlood.asItem());
-        output.accept(AetherConstructFluids.blizzBlood.asItem());
-
-        output.accept(AetherConstructFluids.moltenSoulInfused.asItem());
-        output.accept(AetherConstructFluids.moltenShellite.asItem());
-        output.accept(AetherConstructFluids.moltenTwinite.asItem());
-        output.accept(AetherConstructFluids.moltenDragonsteel.asItem());
-        output.accept(AetherConstructFluids.moltenAbyssal.asItem());
+        output.accept(AetherConstructFluids.calcinedHolystone.asItem());
+        output.accept(AetherConstructFluids.moltenZanite.asItem());
+        output.accept(AetherConstructFluids.moltenGravitite.asItem());
+        output.accept(AetherConstructFluids.moltenNeptune.asItem());
+        output.accept(AetherConstructFluids.moltenPhoenix.asItem());
+        output.accept(AetherConstructFluids.moltenValkyrum.asItem());
     }
 }
