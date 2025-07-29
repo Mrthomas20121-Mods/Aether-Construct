@@ -15,6 +15,7 @@ public class AetherConstructFluidTextureProvider extends AbstractFluidTexturePro
     @Override
     public void addTextures() {
 
+        named(AetherConstructFluids.moltenAmbrosium, "molten/ambrosium");
         named(AetherConstructFluids.calcinedHolystone, "molten/calcined_holystone");
         named(AetherConstructFluids.moltenZanite, "molten/zanite");
         named(AetherConstructFluids.moltenGravitite, "molten/gravitite");

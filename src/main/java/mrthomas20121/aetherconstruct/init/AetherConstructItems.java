@@ -4,10 +4,12 @@ import mrthomas20121.aetherconstruct.AetherConstruct;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.RegistryObject;
 import slimeknights.mantle.registration.deferred.ItemDeferredRegister;
 import slimeknights.mantle.registration.deferred.SynchronizedDeferredRegister;
+import slimeknights.mantle.registration.object.ItemObject;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 
 public class AetherConstructItems {
@@ -17,18 +19,19 @@ public class AetherConstructItems {
 
     public static final RegistryObject<CreativeModeTab> tabAetherConstruct = CREATIVE_TABS.register(
             "aether_construct_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.aether_construct"))
-                    .icon(() -> new ItemStack(AetherConstructFluids.calcinedHolystone.asItem()))
+                    .icon(() -> new ItemStack(AetherConstructFluids.moltenAmbrosium))
                     .displayItems(AetherConstructItems::addTabItems)
                     .withTabsBefore(TinkerFluids.tabFluids.getId())
                     .build());
 
     private static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
 
-        output.accept(AetherConstructFluids.calcinedHolystone.asItem());
-        output.accept(AetherConstructFluids.moltenZanite.asItem());
-        output.accept(AetherConstructFluids.moltenGravitite.asItem());
-        output.accept(AetherConstructFluids.moltenNeptune.asItem());
-        output.accept(AetherConstructFluids.moltenPhoenix.asItem());
-        output.accept(AetherConstructFluids.moltenValkyrum.asItem());
+        output.accept(AetherConstructFluids.moltenAmbrosium);
+        output.accept(AetherConstructFluids.calcinedHolystone);
+        output.accept(AetherConstructFluids.moltenZanite);
+        output.accept(AetherConstructFluids.moltenGravitite);
+        output.accept(AetherConstructFluids.moltenNeptune);
+        output.accept(AetherConstructFluids.moltenPhoenix);
+        output.accept(AetherConstructFluids.moltenValkyrum);
     }
 }

@@ -37,17 +37,9 @@ public class AetherConstructRecipeProvider extends RecipeProvider implements IMa
         String castFolder = "casting/";
         String smelteryFolder = "smeltery/";
 
-        // modifier folders
-        String upgradeFolder = "tools/modifiers/upgrade/";
-        String abilityFolder = "tools/modifiers/ability/";
-        String slotlessFolder = "tools/modifiers/slotless/";
-        String upgradeSalvage = "tools/modifiers/salvage/upgrade/";
-        String abilitySalvage = "tools/modifiers/salvage/ability/";
-        String defenseFolder = "tools/modifiers/defense/";
-        String defenseSalvage = "tools/modifiers/salvage/defense/";
-        String compatFolder = "tools/modifiers/compat/";
-        String compatSalvage = "tools/modifiers/salvage/compat/";
-        String worktableFolder = "tools/modifiers/worktable/";
+        SmelteryRecipeBuilder.fluid(consumer, location("ambrosium"), AetherConstructFluids.moltenAmbrosium)
+                .meltingFolder(smelteryFolder+"melting")
+                .largeGem();
 
         materialMeltingCasting(consumer, AetherMaterialIds.HOLYSTONE, AetherConstructFluids.calcinedHolystone, smelteryFolder);
         materialMeltingCasting(consumer, AetherMaterialIds.ZANITE, AetherConstructFluids.moltenZanite, smelteryFolder);

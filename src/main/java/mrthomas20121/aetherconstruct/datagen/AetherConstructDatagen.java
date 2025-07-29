@@ -38,6 +38,7 @@ public class AetherConstructDatagen {
         generator.addProvider(server, new AetherConstructFluidEffectProvider(packOutput));
 
         boolean client = event.includeClient();
+        generator.addProvider(client, new AetherConstructBlockstateProvider(packOutput, existingFileHelper));
         generator.addProvider(client, new AetherConstructItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(client, new AetherConstructColorProvider(packOutput));
         generator.addProvider(client, new MaterialPartTextureGenerator(packOutput, existingFileHelper, partSpriteProvider, materialSpriteProvider));

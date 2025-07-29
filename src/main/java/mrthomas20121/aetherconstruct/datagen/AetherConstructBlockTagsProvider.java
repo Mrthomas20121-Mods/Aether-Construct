@@ -3,6 +3,7 @@ package mrthomas20121.aetherconstruct.datagen;
 import com.aetherteam.aether.block.AetherBlocks;
 import com.aetherteam.treasure_reforging.block.ReforgingBlocks;
 import mrthomas20121.aetherconstruct.AetherConstruct;
+import mrthomas20121.aetherconstruct.init.AetherConstructTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -26,6 +27,19 @@ public class AetherConstructBlockTagsProvider extends BlockTagsProvider {
                 .add(AetherBlocks.ENCHANTED_GRAVITITE.get())
                 .add(AetherBlocks.AMBROSIUM_BLOCK.get())
                 .add(ReforgingBlocks.VALKYRUM_BLOCK.get())
+                .add(ReforgingBlocks.PYRAL_BLOCK.get());
+
+
+        tag(AetherConstructTags.Blocks.STORAGE_BLOCKS_AMBROSIUM)
+                .add(AetherBlocks.AMBROSIUM_BLOCK.get());
+
+        tag(AetherConstructTags.Blocks.STORAGE_BLOCKS_ZANITE)
+                .add(AetherBlocks.ZANITE_BLOCK.get());
+
+        tag(AetherConstructTags.Blocks.STORAGE_BLOCKS_VALKYRUM)
+                .add(ReforgingBlocks.VALKYRUM_BLOCK.get());
+
+        tag(AetherConstructTags.Blocks.STORAGE_BLOCKS_PYRAL)
                 .add(ReforgingBlocks.PYRAL_BLOCK.get());
     }
 }

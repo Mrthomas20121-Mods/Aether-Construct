@@ -23,6 +23,7 @@ public class AetherConstructFluidTagProvider extends FluidTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider p_256366_) {
+        fluidTag(AetherConstructFluids.moltenAmbrosium);
         fluidTag(AetherConstructFluids.calcinedHolystone);
         fluidTag(AetherConstructFluids.moltenZanite);
         fluidTag(AetherConstructFluids.moltenGravitite);

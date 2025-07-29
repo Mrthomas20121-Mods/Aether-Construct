@@ -16,6 +16,7 @@ public class AetherConstructFluids {
     
     public static FluidDeferredRegister FLUIDS = new FluidDeferredRegister(AetherConstruct.MOD_ID);
 
+    public static final FlowingFluidObject<ForgeFlowingFluid> moltenAmbrosium = FLUIDS.register("molten_ambrosium").type(hot("molten_ambrosium").temperature(1000).lightLevel(15)).block(createBurning(MapColor.COLOR_YELLOW, 15, 20, 1f)).bucket().flowing();
     public static final FlowingFluidObject<ForgeFlowingFluid> calcinedHolystone = FLUIDS.register("calcined_holystone").type(hot("calcined_holystone").temperature(500).lightLevel(10)).block(createBurning(MapColor.COLOR_GRAY, 12, 15, 3f)).bucket().flowing();
     public static final FlowingFluidObject<ForgeFlowingFluid> moltenZanite = FLUIDS.register("molten_zanite").type(hot("molten_zanite").temperature(800).lightLevel(15)).block(createBurning(MapColor.COLOR_PURPLE, 15, 15, 2f)).bucket().flowing();
     public static final FlowingFluidObject<ForgeFlowingFluid> moltenGravitite = FLUIDS.register("molten_gravitite").type(hot("molten_gravitite").temperature(1000).lightLevel(15)).block(createBurning(MapColor.COLOR_PURPLE, 15, 15, 2f)).bucket().flowing();

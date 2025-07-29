@@ -2,6 +2,7 @@ package mrthomas20121.aetherconstruct;
 
 import mrthomas20121.aetherconstruct.datagen.AetherConstructDatagen;
 import mrthomas20121.aetherconstruct.fluid_effect.FloatBlockFluidEffect;
+import mrthomas20121.aetherconstruct.init.AetherConstructBlocks;
 import mrthomas20121.aetherconstruct.init.AetherConstructFluids;
 import mrthomas20121.aetherconstruct.init.AetherConstructItems;
 import mrthomas20121.aetherconstruct.init.AetherConstructModifiers;
@@ -34,6 +35,7 @@ public class AetherConstruct {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		AetherConstructItems.ITEMS.register(bus);
+		AetherConstructBlocks.BLOCKS.register(bus);
 		AetherConstructItems.CREATIVE_TABS.register(bus);
 		AetherConstructFluids.FLUIDS.register(bus);
 		AetherConstructModifiers.MODIFIERS.register(bus);
@@ -44,8 +46,6 @@ public class AetherConstruct {
 
 	private void register(RegisterEvent event) {
 		if(event.getRegistryKey() == Registries.RECIPE_SERIALIZER) {
-			// register entity predicate
-			LivingEntityPredicate.LOADER.register(getResource("is_in_aether_dim"), AetherTinkerPredicate.IS_IN_AETHER.getLoader());
 
 			// Fluid effects
 			FluidEffect.BLOCK_EFFECTS.register(getResource("float_block"), FloatBlockFluidEffect.LOADER);

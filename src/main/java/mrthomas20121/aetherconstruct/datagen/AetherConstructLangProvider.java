@@ -1,6 +1,7 @@
 package mrthomas20121.aetherconstruct.datagen;
 
 import mrthomas20121.aetherconstruct.AetherConstruct;
+import mrthomas20121.aetherconstruct.init.AetherConstructBlocks;
 import mrthomas20121.aetherconstruct.init.AetherConstructFluids;
 import mrthomas20121.aetherconstruct.init.AetherConstructModifiers;
 import net.minecraft.data.PackOutput;
@@ -19,9 +20,12 @@ public class AetherConstructLangProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
 
+        addBlock(AetherConstructBlocks.NEPTUNE_BLOCK, "Neptune Block");
+
+        fluid(AetherConstructFluids.moltenAmbrosium, "Molten Ambrosium", "Molten Ambrosium place light blocks on uses.");
         fluid(AetherConstructFluids.calcinedHolystone, "Calcined Holystone", "Calcined Holystone is a useful fluid for combat.");
         fluid(AetherConstructFluids.moltenZanite, "Molten Zanite", "Molten Zanite is a good fluid for combat.");
-        fluid(AetherConstructFluids.moltenGravitite, "Molten Gravitite", "Molten Gravitite make blocks/entity float like the tools/weapons");
+        fluid(AetherConstructFluids.moltenGravitite, "Molten Gravitite", "Molten Gravitite make blocks floats.");
         fluid(AetherConstructFluids.moltenNeptune, "Molten Neptune", "Molten Neptune is very good for mining.");
         fluid(AetherConstructFluids.moltenValkyrum, "Molten Valkyrum", "Molten Valkyrum is a useful fluid for combat.");
         fluid(AetherConstructFluids.moltenPhoenix, "Molten Phoenix", "Molten Phoenix is a useful fluid for combat.");
